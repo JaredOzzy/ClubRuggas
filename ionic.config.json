@@ -1,0 +1,8 @@
+{
+  "name": "clubruggas",
+  "app_id": "877e8382",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
