@@ -7,6 +7,7 @@ import { ClubsPage } from '../pages/clubs/clubs';
 import { FavouritesPage } from '../pages/favourites/favourites';
 import { LogsPage } from '../pages/logs/logs';
 import { SettingsPage } from '../pages/settings/settings';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,6 +38,7 @@ export class MyApp {
       { title: 'Logs', component: LogsPage },
       { title: 'Favourites', component: FavouritesPage },
       { title: 'Settings', component: SettingsPage },
+      { title: 'Login', component: LoginPage },
     ];
   }
 

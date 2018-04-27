@@ -8,6 +8,7 @@ import { FavouritesPage } from '../pages/favourites/favourites';
 import { ClubsPage } from '../pages/clubs/clubs';
 import { LogsPage } from '../pages/logs/logs';
 import { SettingsPage } from '../pages/settings/settings';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LogsPage,
     ClubsPage,
     SettingsPage,
+    LoginPage,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LogsPage,
     ClubsPage,
     SettingsPage,
+    LoginPage,
   ],
   providers: [
     StatusBar,
