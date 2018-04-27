@@ -21,7 +21,7 @@ export class MyApp {
 
   // make HomePage the root (or first) page
   rootPage = HomePage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(
     public platform: Platform,
@@ -33,12 +33,12 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Clubs', component: ClubsPage },
-      { title: 'Logs', component: LogsPage },
-      { title: 'Favourites', component: FavouritesPage },
-      { title: 'Settings', component: SettingsPage },
-      { title: 'Login', component: LoginPage },
+      { title: 'Home', component: HomePage , icon: 'md-home'},
+      { title: 'Clubs', component: ClubsPage, icon: 'ios-american-football' },
+      { title: 'Logs', component: LogsPage, icon: 'ios-podium' },
+      { title: 'Favourites', component: FavouritesPage, icon: 'md-heart' },
+      { title: 'Settings', component: SettingsPage, icon: 'md-cog' },
+      { title: 'Login', component: LoginPage, icon: 'md-log-in'},
     ];
   }
 
