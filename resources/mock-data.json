@@ -1,0 +1,32 @@
+[
+  {
+    "club_id": "1",
+    "name": "Durbanville Rugby Club",
+    "nick_name": "Durbell/Durbies",
+    "iso_name": "DBFC",
+    "history": "Durbell was founded in 1997 and was a great rugby club for many years that kuiers hard and plays hard",
+    "motto": "Work Hard Play Hard",
+    "year_founded": "1997",
+    "email": "durbell@durbell.com",
+    "website": "www.dbrugby.com",
+    "phone_num": "0846266264",
+    "facebook_tag": "@durbanvillebellvillerugby",
+    "twitter_tag": "@durbanvillebellvillerugby",
+    "location": "2 dawnclose eversdal"
+  },
+  {
+    "club_id": "2",
+    "name": "Hamiltons",
+    "nick_name": "Hammies",
+    "iso_name": "HMFC",
+    "history": "Hammies is an old rugby club",
+    "motto": "Worker Play Harder",
+    "year_founded": "1935",
+    "email": "hammies@hammies.com",
+    "website": "www.hammies.com",
+    "phone_num": "0846266264",
+    "facebook_tag": "@hammies",
+    "twitter_tag": "@hammies",
+    "location": "2 dawnclose eversdal"
+  }
+]

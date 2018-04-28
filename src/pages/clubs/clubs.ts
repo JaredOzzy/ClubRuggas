@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, LoadingController} from 'ionic-angular';
+import { Http } from '@angular/http';
+
 
 /**
  * Generated class for the ClubsPage page.
@@ -15,11 +17,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ClubsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  clubData: any;
+ 
+  constructor(
+  	public loadingController: LoadingController,
+  	public http: Http) {
+  	//Controls the loading during API call.
+  	let loader = this.loadingController.create({
+      content: "Strapping Ankles"
+    });
+	loader.present();
+ 	//gets enpoint of API and subscribes the data into a json field and ends loading spinner.
+    this.http.get('https://demo7818584.mockable.io/clubs/get-all-small').subscribe(data => {
+    	console.log(data.json())
+        this.clubData = data.json();
+        loader.dismiss();
+    }, err => {
+        console.log(err);
+    });
+ 
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ClubsPage');
-  }
-
 }
