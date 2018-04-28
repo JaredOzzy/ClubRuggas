@@ -21,7 +21,12 @@ export class MyApp {
 
   // make HomePage the root (or first) page
   rootPage = HomePage;
-  pages: Array<{title: string, component: any, icon: string}>;
+  pages: Array<{
+    title: string,
+    component: any,
+    icon: string,
+    color: any,
+  }>;
 
   constructor(
     public platform: Platform,
@@ -33,12 +38,12 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Home', component: HomePage , icon: 'md-home'},
-      { title: 'Clubs', component: ClubsPage, icon: 'ios-american-football' },
-      { title: 'Logs', component: LogsPage, icon: 'ios-podium' },
-      { title: 'Favourites', component: FavouritesPage, icon: 'md-heart' },
-      { title: 'Settings', component: SettingsPage, icon: 'md-cog' },
-      { title: 'Login', component: LoginPage, icon: 'md-log-in'},
+      { title: 'Home', component: HomePage , icon: 'md-home', color: 'dark'},
+      { title: 'Clubs', component: ClubsPage, icon: 'ios-american-football', color: ''},
+      { title: 'Logs', component: LogsPage, icon: 'ios-podium', color: ''},
+      { title: 'Favourites', component: FavouritesPage, icon: 'md-heart', color: ''},
+      { title: 'Settings', component: SettingsPage, icon: 'md-cog', color: ''},
+      { title: 'Login', component: LoginPage, icon: 'md-log-in', color: ''},
     ];
   }
 
@@ -54,7 +59,20 @@ export class MyApp {
   openPage(page) {
     // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
+    // navigate to the new page if it is not the current page 
     this.nav.setRoot(page.component);
+    // Color for the active item
+    page.color='dark';
+
+    for (let p of this.pages) {
+
+      if(p.title==page.title){
+        p.color='dark';
+      }else{
+        p.color='';
+      }
+    
+    }
+ 
   }
 }
