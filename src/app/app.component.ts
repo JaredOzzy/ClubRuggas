@@ -8,6 +8,11 @@ import { FavouritesPage } from '../pages/favourites/favourites';
 import { LogsPage } from '../pages/logs/logs';
 import { SettingsPage } from '../pages/settings/settings';
 import { LoginPage } from '../pages/login/login';
+import { ResultsPage } from '../pages/results/results';
+import { FixturesPage } from '../pages/fixtures/fixtures';
+import { EventsPage } from '../pages/events/events';
+import { ClubDetailPage } from '../pages/club-detail/club-detail';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,6 +32,12 @@ export class MyApp {
     icon: string,
     color: any,
   }>;
+  sideMenuPages: Array<{
+    title: string,
+    component: any,
+    icon: string,
+    color: any,
+  }>;
 
   constructor(
     public platform: Platform,
@@ -36,6 +47,7 @@ export class MyApp {
   ) {
     this.initializeApp();
 
+
     // set our app's pages
     this.pages = [
       { title: 'Home', component: HomePage , icon: 'md-home', color: 'dark'},
@@ -43,8 +55,21 @@ export class MyApp {
       { title: 'Logs', component: LogsPage, icon: 'ios-podium', color: ''},
       { title: 'Favourites', component: FavouritesPage, icon: 'md-heart', color: ''},
       { title: 'Settings', component: SettingsPage, icon: 'md-cog', color: ''},
-      { title: 'Login', component: LoginPage, icon: 'md-log-in', color: ''},
+      { title: 'Login/Register', component: LoginPage, icon: 'md-log-in', color: ''},
+      { title: 'Results', component: ResultsPage, icon: 'md-log-in', color: ''},
+      { title: 'Fixtures', component: FixturesPage, icon: 'md-log-in', color: ''},
+      { title: 'Events', component: EventsPage, icon: 'md-log-in', color: ''},
+      { title: 'ClubDetail', component: ClubDetailPage, icon: 'md-log-in', color: ''},
     ];
+
+    this.sideMenuPages = [
+      { title: 'Home', component: HomePage , icon: 'md-home', color: 'dark'},
+      { title: 'Clubs', component: ClubsPage, icon: 'ios-american-football', color: ''},
+      { title: 'Logs', component: LogsPage, icon: 'ios-podium', color: ''},
+      { title: 'Favourites', component: FavouritesPage, icon: 'md-heart', color: ''},
+      { title: 'Settings', component: SettingsPage, icon: 'md-cog', color: ''},
+      { title: 'Login/Register', component: LoginPage, icon: 'md-log-in', color: ''},
+    ]
   }
 
   initializeApp() {
@@ -64,7 +89,7 @@ export class MyApp {
     // Color for the active item
     page.color='dark';
 
-    for (let p of this.pages) {
+    for (let p of this.sideMenuPages) {
 
       if(p.title==page.title){
         p.color='dark';

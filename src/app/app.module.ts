@@ -9,6 +9,11 @@ import { ClubsPage } from '../pages/clubs/clubs';
 import { LogsPage } from '../pages/logs/logs';
 import { SettingsPage } from '../pages/settings/settings';
 import { LoginPage } from '../pages/login/login';
+import { ResultsPage } from '../pages/results/results';
+import { FixturesPage } from '../pages/fixtures/fixtures';
+import { EventsPage } from '../pages/events/events';
+import { ClubDetailPage } from '../pages/club-detail/club-detail';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +27,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ClubsPage,
     SettingsPage,
     LoginPage,
+    ResultsPage,
+    FixturesPage,
+    EventsPage,
+    ClubDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ClubsPage,
     SettingsPage,
     LoginPage,
+    ResultsPage,
+    FixturesPage,
+    EventsPage,
+    ClubDetailPage,
   ],
   providers: [
     StatusBar,

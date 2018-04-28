@@ -15,7 +15,7 @@
 
   <ion-content>
     <ion-list no-lines>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)" [color]="p.color">
+      <button ion-item *ngFor="let p of sideMenuPages" (click)="openPage(p)" [color]="p.color">
         <ion-icon item-start [name]="p.icon" ></ion-icon>
         {{p.title}}
       </button>

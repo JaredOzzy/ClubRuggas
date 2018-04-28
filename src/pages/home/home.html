@@ -15,6 +15,11 @@
 
 
 <ion-content padding>
-<h1> Welcome to the HomePage!</h1>
+<ion-tabs>
+  <ion-tab [root]="clubTab" tabTitle="Club" tabIcon="chatbubbles"></ion-tab>
+  <ion-tab [root]="resultTab" tabTitle="Results" tabIcon="chatbubbles"></ion-tab>
+  <ion-tab [root]="fixtureTab" tabTitle="Fixtures" tabIcon="pulse"></ion-tab>
+  <ion-tab [root]="eventTab" tabTitle="Events" tabIcon="pulse"></ion-tab>
+</ion-tabs>
 
 </ion-content>
